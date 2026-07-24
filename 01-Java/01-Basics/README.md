@@ -22,7 +22,7 @@ Java is a high-level, class-based, object-oriented programming language that is 
 Java Virtual Machine (JVM) is an abstract computing machine that enables a computer to run a Java program. It is a part of the Java Runtime Environment (JRE). The JVM performs the following main tasks:
 
 ![JVM Architecture](./images/jvm.png)
-
+<small>*Medium*</small>
 
 ## JDK
 Java Development Kit (JDK) is a software development environment used for developing Java applications and applets. It includes the Java Runtime Environment (JRE), an interpreter/loader (Java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc), and other tools needed for Java development.
