@@ -1,0 +1,1 @@
+![Skeleton of a Java Program](../images/skeleton-of-java.png)
