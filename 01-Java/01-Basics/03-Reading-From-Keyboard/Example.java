@@ -4,12 +4,17 @@
 - Java provides a class called Scanner which is used to read input from the keyboard.
 - To use the Scanner class, we need to import it from the java.util package.
 */
-
+// import java.util.*; //optional auto import
 import java.util.Scanner;
 
 public class Example {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+//        |      |    |     |      |_____ obj
+//    DataType  ref. used  class
+//                    to
+//                   create 
+//                 instance of a class           
         System.out.print("Enter your name: ");
         String name = sc.nextLine();
         System.out.println("Name: " + name);
@@ -21,7 +26,12 @@ public class Example {
 /*
 Other methods of Scanner class:
 - nextInt(): Reads an integer from the keyboard.
+- nextFloat(): Read Float
 - nextDouble(): Reads a double from the keyboard.
 - next(): Reads a single word from the keyboard.
+- nextLine(): Reads complete line
+- nextBoolean(): Read Boolean
 
+
+- hasNextInt():  returns boolean (true/false) if the upcoming data is int or not
 */
