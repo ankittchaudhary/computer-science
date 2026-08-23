@@ -10,11 +10,10 @@ import java.util.Scanner;
 public class Example {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-//        |      |    |     |      |_____ obj
-//    DataType  ref. used  class
-//                    to
-//                   create 
-//                 instance of a class           
+    //      Scanner: data type/class
+    //           sc: reference variable
+    //     new Scanner(System.in): creates a Scanner object that reads
+    //                             input from the keyboard (standard input)
         System.out.print("Enter your name: ");
         String name = sc.nextLine();
         System.out.println("Name: " + name);
