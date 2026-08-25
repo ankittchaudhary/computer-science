@@ -31,8 +31,14 @@ public class Main {
         */
 
          //XOR (^) Operator
-         r=p^q;
+         r=p^q; //12
          System.out.printf("XOR of %d and %d is %d",p,q,r);
+         /*
+         0b1010
+         0b0110
+         ------
+         0b1100 //12
+         */
 
     }
 }
