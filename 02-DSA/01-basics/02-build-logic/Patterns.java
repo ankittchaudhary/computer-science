@@ -10,6 +10,9 @@ public class Patterns{
        //print17(4);
        //print18(4);
        //print19(5);
+       //print20(4);
+       //print21(5);
+       print22(4);
     }
     static void print1(int rows, int cols){
         for(int i =1; i<=rows; i++){
@@ -19,6 +22,7 @@ public class Patterns{
             System.out.println();
         }
     }
+    
     static void print11(int n){
         int start = 1;
         for(int i =0; i<n; i++){
@@ -160,5 +164,52 @@ public class Patterns{
             System.out.println();
         }
     }
+    static void print20(int n){
+        for(int i =0; i<=2*n; i++){
+            //stars
+            int stars =i+1;
+            if(i>=n) stars= 2*n-i+1;
+            for(int j=0; j<stars; j++){
+                System.out.print("*");
+            }
 
+            //spaces
+            int spaces = 2*n-(2*i);
+            if(i>=n) spaces =2*(i-n);
+            for(int j=0; j<spaces; j++){
+                System.out.print(" ");
+            }
+
+            for(int j=0; j<stars; j++){
+                System.out.print("*");
+            }
+
+
+            System.out.println();
+        }
+    }
+    static void print21(int n){
+        for(int i =0; i<n; i++){
+            for(int j =0; j<n; j++){
+                if(i==0 || j==0 || i==n-1 || j==n-1){
+                    System.out.print("*");
+                } else System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    static void print22(int n){
+        for(int i =0; i<2*n-1; i++){
+            for(int j=0; j<2*n-1; j++){
+                int top =i;
+                int left = j;
+                int right = (2*n-2)-j;
+                int bottom = (2*n-2) -i;
+                System.out.print(n-Math.min(Math.min(top,bottom), Math.min(left, right))+" ");
+                
+            }
+            
+            System.out.println();
+        }
+    }
 }
