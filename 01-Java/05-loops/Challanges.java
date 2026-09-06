@@ -51,8 +51,13 @@ public class Challanges {
         //8. Display number in words
         //eg. 123 = One Two Three
         // eg: 1700 = One Seven Zero Zero
-        int num = 12300;
-        displayWords(num);
+        // int num = 12300;
+        // displayWords(num);
+
+        //9. Display Arithmetic Progression
+        int limit = 5;
+        int commonDifference = 3;
+        displayAP(limit, commonDifference);
         sc.close();
     }
 
@@ -197,4 +202,12 @@ public class Challanges {
     }
 }
 
+    static void displayAP(int limit, int difference){
+        int firstTerm = difference-1;
+        
+        for(int i =limit; i>0; i--){
+            System.out.print(firstTerm+(limit-i)*difference);
+            System.out.print(" ");
+        }
+    }
 }
