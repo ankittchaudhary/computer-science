@@ -55,9 +55,26 @@ public class Challanges {
         // displayWords(num);
 
         //9. Display Arithmetic Progression
-        int limit = 5;
-        int commonDifference = 3;
-        displayAP(limit, commonDifference);
+        // int limit = 5;
+        // int commonDifference = 5;
+        // displayAP(limit, commonDifference);
+
+        //10. Display Geometric Progression
+        // 2, 6, 18, 54 ...  
+        // common ratio r = a1/a0 = 3;
+        // a, ar, ar2, ar3....
+        // System.out.println("Display GP");
+        // System.out.println("Enter a, r and n");
+        // int a = sc.nextInt();
+        // int r = sc.nextInt();
+        // int n = sc.nextInt();
+        // displayGP(a, r, n);
+
+        //11. Fibonacci
+        // 0 1 1 2 3 5 8 13 21 ....
+        System.out.print("Enter n: ");
+        int n = sc.nextInt();
+        displayFibonacci(n);
         sc.close();
     }
 
@@ -208,6 +225,29 @@ public class Challanges {
         for(int i =limit; i>0; i--){
             System.out.print(firstTerm+(limit-i)*difference);
             System.out.print(" ");
+        }
+    }
+
+    static void displayGP(int a, int r, int n){
+        int term = a;
+        for(int i =0; i<n; i++){
+            System.out.print(term+ ",");
+            term= term*r;
+        }
+    }
+
+    static void displayFibonacci(int n){
+        int a = 0;
+        int b = 1;
+        int c;
+        System.out.print(a+ ","+ b+",");
+
+        for(int i =0; i<n-2; i++){
+            c = a+b;
+            System.out.print(c+",");
+            
+            a =b;
+            b = c;
         }
     }
 }
