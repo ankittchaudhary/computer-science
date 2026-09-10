@@ -1,6 +1,8 @@
-public class Main {
+public class BasicMaths {
     public static void main(String[] args) {
         int num = 35330;
+
+        //1. Count no. of digits
         System.out.println(countDigits(num));
     }
 

@@ -1,6 +1,11 @@
 public class Patterns{
     public static void main(String[] args) {
-       //print1(4, 8);
+       //print1(4);
+       //print2(5);
+       //print3(5);
+       //print4(5);
+       //print5(5);
+       //print6(5);
        //print11(5);
        //print12(4);
        //print13(5);
@@ -12,17 +17,56 @@ public class Patterns{
        //print19(5);
        //print20(4);
        //print21(5);
-       print22(4);
+       //print22(4);
     }
-    static void print1(int rows, int cols){
-        for(int i =1; i<=rows; i++){
-            for(int j =1; j<=cols; j++){
+    static void print1(int n){
+        for(int i =1; i<=n; i++){
+            for(int j =1; j<=n; j++){
                 System.out.print("* ");
             }
             System.out.println();
         }
     }
-    
+    static void print2(int n){
+        for(int i =1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    static void print3(int n){
+        for(int i =1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(j +" ");
+            }
+            System.out.println();
+        }
+    }
+    static void print4(int n){
+        for(int i =1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(i +" ");
+            }
+            System.out.println();
+        }
+    }
+    static void print5(int n){
+        for(int i =n; i>=1; i--){
+            for(int j=1; j<=i; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    static void print6(int n){
+        for(int i =n; i>=1; i--){
+            for(int j=1; j<=i; j++){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
     static void print11(int n){
         int start = 1;
         for(int i =0; i<n; i++){
