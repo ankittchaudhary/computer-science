@@ -1,7 +1,7 @@
 public class Challanges {
     public static void main(String[] args) {
         //1. Finding sum of all elements
-        int nums[] = {3, 7, 7, 8, 12, 6, 15, 5, 24, 35, 34, 10};
+        int nums[] = {5, 9, 6, 7, 10, 12};
         //System.out.println(sum(nums));
 
         //2. Searching an element
@@ -14,6 +14,21 @@ public class Challanges {
 
         //4. find second largest element
         //System.out.println(findSecondMaximum(nums));
+
+        //5. Rotating an array
+        // left rotation -> shift all elements on left by 1 place
+        /*
+        arr-> {1, 2,5, 7}
+        left shift 2 5 7 and at the end 1 which was removed
+        */
+        //leftRotate(nums);
+
+        // right rotation -> shift all elements on right side by 1 place
+        /*
+        arr->           {1, 2,5, 7}
+        right roate  {7, 1, 2, 5}
+        */
+        rightRotate(nums);
     }
 
     static int sum(int arr[]){
@@ -54,5 +69,42 @@ public class Challanges {
             }
         }
         return max2;
+    }
+
+    static void leftRotate(int arr[]){
+        System.out.print("Original: ");
+        for (int i : arr) {
+            System.out.print(i+",");
+        }
+        int temp = arr[0];
+        for(int i =1; i<arr.length; i++){
+            arr[i-1]=arr[i];
+        }
+        arr[arr.length-1] = temp;
+        System.out.println();
+        System.out.print("Rotated: ");
+        for (int x : arr) {
+            System.out.print(x+",");
+        }
+        System.out.println();
+    }
+
+    static void rightRotate(int arr[]){
+        System.out.print("Original: ");
+        for (int i : arr) {
+            System.out.print(i+" ");
+        }
+        System.out.println();
+
+        int temp = arr[arr.length-1];
+        for(int i =arr.length-1; i>0; i--){
+            arr[i]=arr[i-1];
+        }
+        arr[0] = temp;
+
+        System.out.println("Right Rotated: ");
+        for (int i : arr) {
+            System.out.print(i+ " ");
+        }
     }
 }
