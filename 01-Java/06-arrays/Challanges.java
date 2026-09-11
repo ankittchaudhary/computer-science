@@ -48,9 +48,13 @@ public class Challanges {
         // insertElement(arr, n, index, value);
 
         //7. delete a value from index
-        int nums[] = {5, 9, 6, 7, 10, 12};
-        int index = 1;
-        deleteElement(nums, index);
+        // int nums[] = {5, 9, 6, 7, 10, 12};
+        // int index = 1;
+        // deleteElement(nums, index);
+
+        //8. Copying an array and print it
+        int arr1[] = {5, 6, 9, 7, 11, 23, 10, 99};
+        //copyArray(arr1);
     }
 
     static int sum(int arr[]) {
@@ -179,4 +183,18 @@ public class Challanges {
             System.out.print(i+" ");
         }
     }
+
+    static void copyArray(int arr1[]){
+        int arr2[] = new int[arr1.length];
+        for(int i =0; i<arr1.length; i++){
+            arr2[i] = arr1[i];
+        }
+        //print
+        System.out.print("Array2: ");
+        for (int i : arr2) {
+            System.out.print(i+" ");
+        }
+    }
+
+
 }
