@@ -53,8 +53,31 @@ public class Challanges {
         // deleteElement(nums, index);
 
         //8. Copying an array and print it
-        int arr1[] = {5, 6, 9, 7, 11, 23, 10, 99};
+        //int arr1[] = {5, 6, 9, 7, 11, 23, 10, 99};
         //copyArray(arr1);
+
+        //9. Reverse copy an array and print it
+        //og array
+        // System.out.print("Original Array: ");
+        // printArray(arr1);
+        // reverseCopyArray(arr1);
+
+        //10. Increase Size of an Array
+        /*
+        arr1 = {1, 3, 7, 8, 5, 9};
+        increase size of arr1 so it can store more int values
+        */
+        // int arr[] = {1, 3, 7, 8, 5, 9};
+        // //store 11 in this array after increasing size
+        // arr = increaseSizeAndStore(arr, 18);
+        // printArray(arr);
+    }
+
+    static void printArray(int arr[]){
+        for (int i : arr) {
+            System.out.print(i+" ");
+        }
+        System.out.println();
     }
 
     static int sum(int arr[]) {
@@ -196,5 +219,27 @@ public class Challanges {
         }
     }
 
+    static void reverseCopyArray(int arr1[]){
+        int arr2[] = new int[arr1.length];
 
+        for(int i=0; i<arr1.length; i++){
+            arr2[i] = arr1[arr1.length-1-i];
+        }
+        //print
+        System.out.print("Reverse Copied: ");
+        printArray(arr2);
+    }
+
+    static int[] increaseSizeAndStore(int arr[], int value){
+        int ogArrLen= arr.length;
+        int tempArr[] = new int[2*arr.length];
+        //copy items of arr in tempArr
+        for(int i=0; i<arr.length; i++){
+            tempArr[i]=arr[i];
+        }
+
+        tempArr[ogArrLen]=value;
+
+        return tempArr;
+    }
 }
