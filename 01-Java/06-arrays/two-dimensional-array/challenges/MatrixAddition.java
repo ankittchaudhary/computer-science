@@ -18,16 +18,16 @@ public class MatrixAddition {
             }
         }
 
-        print(C);
+        PrintArray.print2D(C);
 
     }
-    static void print(int arr[][]){
-        for (int[] row : arr) {
-            for (int elem : row) {
-                System.out.print(elem+" ");
-            }
-            System.out.println();
-        }
-    }
+    // static void print(int arr[][]){
+    //     for (int[] row : arr) {
+    //         for (int elem : row) {
+    //             System.out.print(elem+" ");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
 
 }
