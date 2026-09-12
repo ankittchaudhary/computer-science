@@ -1,6 +1,6 @@
 public class BasicMaths {
     public static void main(String[] args) {
-        int num = 1234;
+        //int num = 1234;
 
         //1. Count no. of digits
         //System.out.println(countDigits(num));
@@ -20,6 +20,11 @@ public class BasicMaths {
         //5. Is Armstrong
         // int n = 153;
         // System.out.println(isArmstrong(n));
+
+        //6. Print all Divisors of a num
+        int num =36;
+        printDivisors(num);
+
     }
 
     static int countDigits(int num) {
@@ -67,5 +72,12 @@ public class BasicMaths {
             n/=10;
         }
         return sum==num;
+    }
+    static void printDivisors(int num){
+        for(int i =1; i<=num; i++){
+            if(num%i == 0){
+                System.out.print(i+",");
+            }
+        }
     }
 }
