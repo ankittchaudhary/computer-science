@@ -23,6 +23,14 @@ public class Intro {
             }
             System.out.println();
         }
+
+        //Jagged Array
+        int [][] C;
+        C = new int [3][]; //3 rows
+        
+        C[0] = new int [2];  //each row having subarray of this size
+        C[1] = new int [4];
+        C[2] = new int [5];
        
     }
 }
