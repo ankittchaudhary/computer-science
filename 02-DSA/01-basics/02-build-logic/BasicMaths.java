@@ -13,9 +13,13 @@ public class BasicMaths {
         //System.out.println(isPalindrome(n));
 
         //4. GCD
-        int a = 48;
-        int b = 18;
-        System.out.println(findGCD(a, b));
+        // int a = 48;
+        // int b = 18;
+        // System.out.println(findGCD(a, b));
+
+        //5. Is Armstrong
+        // int n = 153;
+        // System.out.println(isArmstrong(n));
     }
 
     static int countDigits(int num) {
@@ -52,5 +56,16 @@ public class BasicMaths {
             num2 = rem;
         }
         return num1;
+    }
+    static boolean isArmstrong(int num){
+        int sum=0;
+        int n = num;
+        int digits = countDigits(num);
+        while(n>0){
+            int rem = n%10;
+            sum += Math.pow(rem,digits);
+            n/=10;
+        }
+        return sum==num;
     }
 }
