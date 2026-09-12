@@ -22,8 +22,12 @@ public class BasicMaths {
         // System.out.println(isArmstrong(n));
 
         //6. Print all Divisors of a num
-        int num =36;
-        printDivisors(num);
+        // int num =36;
+        // printDivisors(num);
+
+        //7. check if num is prime
+        int num =3;
+        System.out.println(isPrime(num));
 
     }
 
@@ -79,5 +83,16 @@ public class BasicMaths {
                 System.out.print(i+",");
             }
         }
+    }
+    static boolean isPrime(int num){
+        
+        if(num<=1){
+            return false;
+        }
+        int sqrt = (int) Math.sqrt(num);
+        for(int i=2; i<=sqrt; i++){
+            if(num%i==0) return false;
+        }
+        return true;
     }
 }
