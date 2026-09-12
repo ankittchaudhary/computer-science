@@ -12,4 +12,11 @@ public class PrintArray {
             System.out.println();
         }
     }
+
+    public static void print1D(int arr[]){
+        for (int i : arr) {
+            System.out.print(i+" ");
+        }
+        System.out.println();
+    }
 }
