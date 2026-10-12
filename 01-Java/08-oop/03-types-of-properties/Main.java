@@ -3,14 +3,14 @@
 
 class Bank {
     //1. Read & writable : Both getter and setter
-    private int balance;
+    private long balance;
     
     // Getter
-    public int getBalance(){
+    public long getBalance(){
         return balance;
     }
     // Setter
-    public void setBalance(int balance){
+    public void setBalance(long balance){
         this.balance=balance;
     }
 
@@ -40,5 +40,8 @@ public class Main {
         System.out.println(holder.getBalance());
 
         System.out.println(holder.getAccountNumber()); //null but suppose account number gets generated
+
+        holder.setInternalLogs("2000 transferred to x"); //record in db
+        
     }
 }
