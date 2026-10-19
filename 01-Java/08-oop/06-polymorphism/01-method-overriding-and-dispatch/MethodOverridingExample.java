@@ -36,6 +36,9 @@ public class MethodOverridingExample{
         // lc.openRoof();
 
         Car c = new LuxuryCar(); //ref of car and obj of Luxury car //means calling a smart tv as old which will work as it will do all things what old tv does, but cant call something wjich is not present
+
+        //Even if we have a ref of super class, but methods are but methods are called based on obj (here c is obj of Car class but ref of super class is given)
+
         c.changeGear();  //Luxury car
         //c.openRoof(); //can not call something which is not in Car class
     }
