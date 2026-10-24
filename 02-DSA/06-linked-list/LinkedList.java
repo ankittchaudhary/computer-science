@@ -6,7 +6,7 @@ public class LinkedList {
     //Nested or inner class //helper
     class Node{
         int value;
-        Node next;
+        Node next; //type of next pointer is node itself
 
         //constructor
         Node(int value){
@@ -25,11 +25,13 @@ public class LinkedList {
     //methods
     public void printList(){
         Node temp = head;
-        System.out.print("Linked List: ");
         while(temp!=null){
             System.out.print(temp.value+" ");
             temp = temp.next;
         }
+
+        //print properties
+        System.out.println("| Head: "+getHead()+", Tail: "+getTail()+ ", Length: "+getLength());
     }
 
     public int getHead(){
@@ -86,5 +88,44 @@ public class LinkedList {
 
         //temp is the last node that was removed
         return temp; //returning node removed
+    }
+
+    //prepend
+    public void prepend(int value){
+        Node newNode = new Node(value); //create the node first
+
+        //check if LL is empty
+        if(length==0){
+            head=newNode;
+            tail=newNode;
+        } else{
+            newNode.next=head; //link it
+            head=newNode;
+        }
+
+
+        //inc length as in either case one node is added
+        length++;
+    }
+
+    //remove first
+    public Node removeFirst(){
+        //empty LL condition
+        if(length==0) return null;
+
+        Node temp = head; //the one we need to remove
+        
+        head=head.next; //assigning head to the next one, if one was there then head.next is null so head will become null
+
+        temp.next=null; //unlink temp
+        length--; //dec length by one
+
+        //condition: if only one node was there and removed so length become zero
+        if(length==0){
+            //head=null; //already null as head.next is null if one node was there
+            tail=null;
+        }
+
+        return temp;
     }
 }
