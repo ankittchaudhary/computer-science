@@ -14,7 +14,7 @@ class Cuboid extends Rectangle{
     int x =20;
 
     Cuboid(int l, int b, int h){
-        super(l, b); // ref. to super class or parent class
+        super(l, b); // ref. to super class or parent class, calls parent's parameterized constructor
         height=h;
     }
 
