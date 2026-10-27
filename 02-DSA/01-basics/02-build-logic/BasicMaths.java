@@ -26,8 +26,16 @@ public class BasicMaths {
         // printDivisors(num);
 
         //7. check if num is prime
-        int num =3;
-        System.out.println(isPrime(num));
+        // int num =3;
+        // System.out.println(isPrime(num));
+
+        //8. Count number of odd digits in a number
+        // int num = 585759578;
+        // System.out.println(countOddDigits(num));
+
+        //9. Return largest digit in a number
+        int num = 91230;
+        System.out.println(largestDigit(num));
 
     }
 
@@ -94,5 +102,37 @@ public class BasicMaths {
             if(num%i==0) return false;
         }
         return true;
+    }
+    static int countOddDigits(int num){
+        if (num == 0) return 1;
+
+        long n = Math.abs((long) num);
+        int count = 0;
+
+        while (n > 0) {
+            
+            if(n%2!=0){
+                count++;
+            }
+            n = n / 10; 
+        }
+
+        return count;
+    }
+    static int largestDigit(int num){
+        if (num == 0) return 0;
+
+        int n = Math.abs(num);
+        int largest=1;
+
+        while (n > 0) {
+            int lastDigit = n%10;
+            if(lastDigit>largest){
+                largest=lastDigit;
+            }
+            n = n / 10;
+        }
+
+        return largest;
     }
 }
