@@ -1,0 +1,5 @@
+- Interfaces are meant for polymorphism and defining contracts (what methods a class should implement), while abstract classes are meant for sharing code among related classes and providing a common base.
+- Interfaces are implemented by classes, while abstract classes are extended (Inherited) by subclasses.
+- A class can implement multiple interfaces, but it can only extend one abstract class.
+- Interfaces cannot have any implementation (except for default methods in some languages), while abstract classes can have both abstract methods (without implementation) and concrete methods (with implementation).
+- Interfaces are typically used to define capabilities that can be shared across unrelated classes, while abstract classes are used to represent a common base for a group of related classes.
