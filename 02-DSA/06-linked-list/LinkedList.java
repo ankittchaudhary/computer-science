@@ -131,7 +131,7 @@ public class LinkedList {
         return temp;
     }
 
-    //get node at perticular index
+    //get node at perticular index: O(n) as loop comes into picture
     public Node get(int index){  //suppose index 3 so loop execute 3 times as starting from 0, so 0, 1, 2
         if(index < 0 || index>=length) return  null;
 
@@ -141,4 +141,24 @@ public class LinkedList {
         }
         return temp;
     }
+
+    //set value of node at perticular index, more like updating
+    public boolean set(int index, int value){
+        // if(index<0||index >= length) return false;
+
+        // Node temp=head;
+        // for(int i =0; i<index; i++){
+        //     temp=temp.next;
+        // }
+        //can replace above with this 
+        Node temp= get(index);
+        if(temp!=null){
+            temp.value=value;
+            return true;
+        }
+
+        return false;
+    }
+
+
 }

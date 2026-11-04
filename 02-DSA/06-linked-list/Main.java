@@ -25,6 +25,14 @@ public class Main{
         myLinkedList.printList();
 
         //get node by index
-        System.out.println(myLinkedList.get(3).value);
+        myLinkedList.printList(); //print list
+        int index = 2;
+        System.out.printf("Item at index %d is: ", index);
+        System.out.println(myLinkedList.get(index).value);
+
+        //set/update value of node at perticular index
+        myLinkedList.printList();
+        myLinkedList.set(2, 16);
+        myLinkedList.printList();
     }
 }
