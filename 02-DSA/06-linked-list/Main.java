@@ -33,6 +33,12 @@ public class Main{
         //set/update value of node at perticular index
         myLinkedList.printList();
         myLinkedList.set(2, 16);
+
+
         myLinkedList.printList();
+        //OG LL:  11 3 16 7
+        //insert node in between
+        myLinkedList.insert(2, 24);  //24 node at index 2 meaning at 23, so 23 move ahead
+        myLinkedList.printList(); //11 3 24 16 7
     }
 }

@@ -160,5 +160,40 @@ public class LinkedList {
         return false;
     }
 
+    //insert a node at perticular index: consider LL: 11 3 23 7
+    public boolean insert(int index, int value){ //index = 2, 23 is here
+        if(index<0 || index>length) return false;
+
+        if(index==0){
+            prepend(value);
+            return true;
+        }
+
+        if(index==length){ //in the end
+            append(value);
+            return true;
+        }
+
+        Node newNode = new Node(value);  //let say node 5 is created
+        // Node temp = head;
+        // Node prev = head;
+        // for(int i =0; i<index; i++){
+        //     prev = temp;
+        //     temp = temp.next;
+        // }
+        // if(temp!=null){
+        //     //temp at this point is now pinting to node at that perticular index let say index 2 which points to 23
+        //     prev.next=newNode; //prev points to node(3) and we are saying node(3) now points to new node 5
+        //     newNode.next=temp; //new node(5) points to temp(which was 23) and 23 was alreading pointing to 7
+        //     length++; //increase the length as new node has been created
+        // }
+        Node temp = get(index-1); //node before the node, it will be node(3) at index 1
+        newNode.next=temp.next; //new node(5) points to 3's ahead which is 23
+        temp.next=newNode; //3 points to new node which is 5
+
+        length++;
+        
+        return true;
+    }
 
 }
