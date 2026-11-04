@@ -23,5 +23,8 @@ public class Main{
         myLinkedList.removeFirst();
         System.out.print("Updated LL after remove first: ");
         myLinkedList.printList();
+
+        //get node by index
+        System.out.println(myLinkedList.get(3).value);
     }
 }

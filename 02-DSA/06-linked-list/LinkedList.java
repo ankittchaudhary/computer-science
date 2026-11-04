@@ -46,7 +46,7 @@ public class LinkedList {
         return length;
     }
 
-    
+    //add item in end O(1)
     public void append(int value){
         //create the node
         Node newNode = new Node(value);
@@ -63,6 +63,8 @@ public class LinkedList {
         length++; //increase the length
 
     }
+
+    //O(n)
     public Node removeLast(){
         //case : empty linkedlist
         if(length==0) return null;
@@ -71,8 +73,8 @@ public class LinkedList {
         Node prev = head;
 
         while (temp.next!=null) {
-            prev=temp;
-            temp=temp.next;
+            prev=temp;  
+            temp=temp.next; //last node it will be
         }
         //we will have prev pointing to second last
         //now temp.next is null means it is the last node that need to be removed
@@ -90,7 +92,7 @@ public class LinkedList {
         return temp; //returning node removed
     }
 
-    //prepend
+    //prepend O(1)
     public void prepend(int value){
         Node newNode = new Node(value); //create the node first
 
@@ -108,7 +110,7 @@ public class LinkedList {
         length++;
     }
 
-    //remove first
+    //remove first O(1)
     public Node removeFirst(){
         //empty LL condition
         if(length==0) return null;
@@ -126,6 +128,17 @@ public class LinkedList {
             tail=null;
         }
 
+        return temp;
+    }
+
+    //get node at perticular index
+    public Node get(int index){  //suppose index 3 so loop execute 3 times as starting from 0, so 0, 1, 2
+        if(index < 0 || index>=length) return  null;
+
+        Node temp = head;
+        for(int i =0; i<index; i++){          //LL was 11 3 23 7 : 1st iteration temp->3 : 2nd iteration i=1, temp->23 : iteration 3 i=2, temp->7 and comes out 
+            temp=temp.next;
+        }
         return temp;
     }
 }
