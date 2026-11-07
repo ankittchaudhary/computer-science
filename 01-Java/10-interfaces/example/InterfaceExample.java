@@ -51,7 +51,7 @@ public class InterfaceExample {
         //for p only call and sms will be available
 
         ICamera cm = new SmartPhone();
-        //for cm click and record will be there
+        //for cm click and record will be there smilar for IMusicPlayer interface
 
     }
 }
