@@ -24,7 +24,13 @@ class Outer{
 public class NestedInnerClass{
     public static void main(String[] args) {
         // Nested Inner Class Example
+        // 
         Outer o = new Outer();
         o.outerDisplay();
+
+        //to directly access inner class in main method
+        Outer.Inner oi = new Outer().new Inner();
+        oi.innerDisplay();
+        System.out.println(oi.y);
     }
 }
