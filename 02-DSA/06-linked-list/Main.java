@@ -40,5 +40,9 @@ public class Main{
         //insert node in between
         myLinkedList.insert(2, 24);  //24 node at index 2 meaning at 23, so 23 move ahead
         myLinkedList.printList(); //11 3 24 16 7
+
+        //remove node at perticulat index let say 2 index from above which is 24, 11-> 3 ->24->16->7
+        myLinkedList.remove(2);
+        myLinkedList.printList();
     }
 }
