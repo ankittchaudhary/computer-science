@@ -44,5 +44,9 @@ public class Main{
         //remove node at perticulat index let say 2 index from above which is 24, 11-> 3 ->24->16->7
         myLinkedList.remove(2);
         myLinkedList.printList();
+
+        //reverse
+        myLinkedList.reverse();
+        myLinkedList.printList();
     }
 }
