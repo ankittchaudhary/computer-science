@@ -200,16 +200,16 @@ public class LinkedList {
     public Node remove(int index){
             if(index<0 || index>=length) return null;
 
-            if (index==0) removeFirst();
-            if (index==length-1) removeLast();
+            if (index==0) return removeFirst();
+            if (index==length-1) return removeLast();
 
-            Node temp = head;
-            Node prev = head;
+            Node prev = get(index-1);
+            Node temp = prev.next;
 
-            for(int i =0; i<index; i++){  //i<index as temp will point to node which we want to remove
-                prev=temp;
-                temp=temp.next;
-            }
+            // for(int i =0; i<index; i++){  //i<index as temp will point to node which we want to remove
+            //     prev=temp;
+            //     temp=temp.next;
+            // }
             
             prev.next=temp.next; //temp.next is the node ahead of the node which we are going to remove
             temp.next=null;
