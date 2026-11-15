@@ -11,7 +11,7 @@ class Test2 extends Student{
 public class Test {
     public static void main() {
         Student s = new Student();
-        s.display();
+        s.display(); //public
 
         //a: default, b: private, c:protected, d:public
 
