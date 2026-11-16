@@ -28,7 +28,7 @@ class NestedTryCatch {
 
             //nesting
             try{
-                System.out.println(A[8]); //out of index bound
+                System.out.println(A[8]); //index out of bound
             } catch(ArrayIndexOutOfBoundsException e){
                 System.out.println(e);
             } 
