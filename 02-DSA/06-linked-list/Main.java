@@ -76,6 +76,8 @@ public class Main{
         if(!ll1.hasLoop()){
             ll1.printList(); //will not execute
         }
+
+        //System.out.println(ll1.length());
         
     }
 }

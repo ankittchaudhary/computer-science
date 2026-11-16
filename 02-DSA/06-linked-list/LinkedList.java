@@ -46,6 +46,16 @@ public class LinkedList {
         return length;
     }
 
+    public int length(){
+        Node temp=head;
+        int length=0;
+        while(temp!=null){
+            length++;
+            temp=temp.next;
+        }
+        return length;
+    }
+
     // add item in end O(1)
     public void append(int value) {
         // create the node
