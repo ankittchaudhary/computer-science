@@ -46,12 +46,12 @@ public class LinkedList {
         return length;
     }
 
-    public int length(){
-        Node temp=head;
-        int length=0;
-        while(temp!=null){
+    public int length() {
+        Node temp = head;
+        int length = 0;
+        while (temp != null) {
             length++;
-            temp=temp.next;
+            temp = temp.next;
         }
         return length;
     }
@@ -296,5 +296,86 @@ public class LinkedList {
 
         return false;
     }
+
+    // 3. Kth node from end, //not optimised
+    public Node findKthFromEnd0(int k) {
+        if (k == 1) {
+            return tail;
+        }
+
+        // calculate length
+        Node temp = head;
+        int length = 0;
+        while (temp != null) {
+            length++;
+            temp = temp.next;
+        }
+
+        if (k <= 0 || k > length)
+            return null;
+        if (k == length) {
+            return head;
+        }
+
+        // return target
+        Node curr = head;
+        for (int i = 0; i < (length - k); i++) {
+            curr = curr.next;
+        }
+
+        return curr;
+
+    }
+
+    //optimised way
+    public Node findKthFromEnd(int k) {
+        if (head == null || k <= 0) {
+            return null;
+        }
+
+        Node slow = head;
+        Node fast = head;
+
+        // move fast by k nodes
+        for (int i = 0; i < k; i++) {
+            if (fast == null) {
+                return null;
+            }
+            fast = fast.next;
+        }
+
+        while (fast != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        return slow;
+    }
+
+    // remove duplicate O(n^2)
+    public void removeDuplicate() {
+        Node curr = head;
+
+        while (curr != null) {
+            Node runner = curr;
+            while (runner.next != null) {
+                if (runner.next.value == curr.value) {
+                    Node duplicate = runner.next;
+                    runner.next = duplicate.next;
+
+                    if (duplicate == tail) {
+                        tail = runner;
+                    }
+                    duplicate.next = null;
+                    length--;
+                } else {
+                    runner = runner.next;
+                }
+            }
+            curr = curr.next;
+        }
+    }
+
+    // remove duplicate (O(n)) using HashSet
 
 }

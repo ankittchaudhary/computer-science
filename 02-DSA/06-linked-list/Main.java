@@ -63,21 +63,27 @@ public class Main{
         LinkedList ll1 = new LinkedList(1);
         ll1.append(2);
         ll1.append(3);
+        ll1.append(1);
         ll1.append(4);
+        ll1.append(2);
         ll1.append(5);
 
         ll1.printList();
-        System.out.println(ll1.hasLoop()); //false
+        // System.out.println(ll1.hasLoop()); //false
 
-        ll1.createLoop(2);
-        System.out.println(ll1.hasLoop());
+        // // ll1.createLoop(2);
+        // // System.out.println(ll1.hasLoop());
 
-        //here we can use hasLoop code to check if LL has loop so avoid printing that, because it will create infinite loop
-        if(!ll1.hasLoop()){
-            ll1.printList(); //will not execute
-        }
+        // //here we can use hasLoop code to check if LL has loop so avoid printing that, because it will create infinite loop
+        // if(!ll1.hasLoop()){
+        //     ll1.printList(); //will not execute
+        // }
 
-        //System.out.println(ll1.length());
-        
+        // //System.out.println(ll1.length());
+        // System.out.println(ll1.findKthFromEnd(5).value); //1
+
+        //remove duplicate
+        ll1.removeDuplicate();
+        ll1.printList();
     }
 }
